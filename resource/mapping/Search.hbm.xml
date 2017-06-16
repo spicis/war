@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="com.war.entity.Search" table="search"
+		lazy="false">
+		<id name="id" column="id" type="java.lang.Integer">
+			<generator class="native"></generator>
+		</id>
+		<property name="mode" type="java.lang.String" column="mode" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="castle" type="java.lang.String" column="castle" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="infantryHp" type="java.lang.String" column="infantry_hp" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="cavalryAtk" type="java.lang.String" column="cavalry_atk" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="chariotAtk" type="java.lang.String" column="chariot_atk" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="sagittaryAtk" type="java.lang.String" column="sagittary_atk" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="soliderNum" type="java.lang.String" column="solider_num" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="enemyCastle" type="java.lang.String" column="enemy_castle" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="power" type="java.lang.String" column="power" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="enemySagittaryAtk" type="java.lang.String" column="enemy_sagittary_atk" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="tip" type="java.lang.String" column="tip" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="xInfantry" type="java.lang.String" column="x_infantry" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="xSagittary" type="java.lang.String" column="x_sagittary" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="xCavalry" type="java.lang.String" column="x_cavalry" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="xChariot" type="java.lang.String" column="x_chariot" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="ixInfantry" type="java.lang.String" column="ix_infantry" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="ixSagittary" type="java.lang.String" column="ix_sagittary" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="ixCavalry" type="java.lang.String" column="ix_cavalry" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="ixChariot" type="java.lang.String" column="ix_chariot" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="viiiInfantry" type="java.lang.String" column="viii_infantry" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="viiiSagittary" type="java.lang.String" column="viii_sagittary" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="viiiCavalry" type="java.lang.String" column="viii_cavalry" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="viiiChariot" type="java.lang.String" column="viii_chariot" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="viiInfantry" type="java.lang.String" column="vii_infantry" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="viiSagittary" type="java.lang.String" column="vii_sagittary" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="viiCavalry" type="java.lang.String" column="vii_cavalry" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="viiChariot" type="java.lang.String" column="vii_chariot" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="viInfantry" type="java.lang.String" column="vi_infantry" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="viSagittary" type="java.lang.String" column="vi_sagittary" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="viCavalry" type="java.lang.String" column="vi_cavalry" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="viChariot" type="java.lang.String" column="vi_chariot" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="vInfantry" type="java.lang.String" column="v_infantry" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="vSagittary" type="java.lang.String" column="v_sagittary" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="vCavalry" type="java.lang.String" column="v_cavalry" update="true" insert="true" not-null="false" unique="false"/>
+		<property name="vChariot" type="java.lang.String" column="v_chariot" update="true" insert="true" not-null="false" unique="false"/>
+	</class>
+</hibernate-mapping>

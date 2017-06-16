@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Console output -->
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p %d{MM-dd HH:mm:ss} %m  (%F:%L) \n" />
+		</layout>
+	</appender>
+
+	<appender name="sysLog" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${epg_framework}/logs/sys.log" />
+		<param name="encoding" value="utf-8" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss},%m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="indexPV" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="${epg_framework}/logs/indexPV.log" />
+		<param name="append" value="true" />
+		<param name="encoding" value="utf-8" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss},%m%n" />
+		</layout>
+	</appender>
+	
+	<!--The root category defines the top level of appenders all catagories 
+		inherit -->
+		
+	<logger name="indexPVLog" additivity="false">
+		<level value="info" />
+		<appender-ref ref="indexPV" />
+	</logger>
+	
+	<root>
+		<priority value="error" />
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="sysLog" />
+	</root>
+</log4j:configuration>
